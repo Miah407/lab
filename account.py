@@ -1,5 +1,4 @@
 class Account:
-
     def __init__(self, name):
         self.account_name = name
         self.account_balance = 0
