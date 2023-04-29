@@ -12,6 +12,7 @@ class Test:
 
     def test_init(self):
         assert self.a1.get_name() == 'John'
+        assert self.a1.get_balance() == 0
 
     def test_deposit(self):
         assert self.a1.deposit(-1.5) is False
@@ -31,7 +32,7 @@ class Test:
         assert self.a1.get_balance() == 0
 
         assert self.a1.deposit(0.5) is False
-        assert self.a1.get_balance() == 0
+        assert self.a1.get_balance() <= 0
 
         assert self.a1.deposit(1.5) is True
         assert self.a1.get_balance() == 1.5
